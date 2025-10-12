@@ -1,0 +1,86 @@
+Project: Student Management System
+Description:
+ Ek program banayenge jisme students ke records store, view, update aur delete kiye ja sakte hain. Ye project basic file handling aur structures ka use sikhaega.
+Features:
+Add a new student
+Store: Name, Roll Number, Age, Marks, etc.
+Display all students
+List all records in a readable format.
+Search a student
+By Roll Number or Name.
+Update student information
+Modify marks, age, etc.
+Delete a student record
+Remove a student from the database.
+Save data to a file and read it back
+Data persists after program closes.
+Concepts Used:
+struct for student record
+Arrays or linked list for storing multiple records
+FILE handling (fopen, fwrite, fread)
+Functions for each operation (add, display, search, update, delete)
+Loops and conditional statements (for, while, if)
+Optional Add-ons:
+Sort students by marks or name
+Calculate class average marks
+Password protection for admin access
+1. System Diagram (Flow)
+mathematica
+Start
+  |
+  v
+[Main Menu]
+  |
+  |--1. Add Student ---> [Input Student Details] ---> [Save to List/File] ---> Back to Menu
+  |
+  |--2. Display All ---> [Read All Records from List/File] ---> [Show on Screen] ---> Back to Menu
+  |
+  |--3. Search Student ---> [Enter Roll Number/Name] ---> [Find in List/File] ---> [Show Details or Not Found] ---> Back to Menu
+  |
+  |--4. Update Student ---> [Search Record] ---> [Modify Details] ---> [Save Changes] ---> Back to Menu
+  |
+  |--5. Delete Student ---> [Search Record] ---> [Remove from File] ---> Back to Menu
+  |
+  |--6. Exit ---> End Program
+2. Explanation of Each Part
+Main Menu
+User ko options dikhata hai: Add, Display, Search, Update, Delete, Exit.
+Loop use hota hai menu pe wapas aane ke liye jab tak user exit na kare.
+Add Student
+User se details lete hain:
+Name
+Roll Number
+Age
+Marks
+Ye details ek structure (struct) me store ki jaati hain.
+Fir list ya file me save karte hain.
+Display All
+Stored records ko screen pe print karte hain.
+Agar file use ho rahi hai, toh file se data read karte hain.
+Agar array/list use ho rahi hai, toh array iterate karke print karte hain.
+Search Student
+User se Roll Number ya Name input lete hain.
+List/file me check karte hain.
+Agar record milta hai, details show karte hain, warna “Not Found” message.
+Update Student
+Pehle record search karte hain (Search logic reuse hota hai).
+Fir user ko option dete hain fields update karne ke liye (age, marks, etc.).
+Changes save karte hain list/file me.
+Delete Student
+Pehle record search karte hain.
+Record milne par list/file se delete kar dete hain.
+Agar array use hai, toh remaining records shift karne padte hain.
+Exit
+Program end hota hai.
+Agar file use ho rahi hai, toh ensure karna ke data save ho gaya hai.
+Ye system beginner ke liye perfect C language project hai kyunki:
+struct aur arrays ka practice milta hai
+File handling sikhi ja sakti hai
+Loops aur conditions practice hoti hai
+Real-world application ka feel milta hai
+
+// commands :
+// gcc Project:StudentManagementSystem/Project_Code/main.c Project:StudentManagementSystem/Project_Code/functions_validation_check.c   -o program
+//./program
+// gcc C_ManyFiles/main.c C_ManyFiles/calc.c -o program
+//./program

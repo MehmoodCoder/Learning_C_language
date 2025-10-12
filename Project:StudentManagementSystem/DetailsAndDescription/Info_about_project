@@ -1,0 +1,255 @@
+1. Project ka Goal
+Ye ek chhota sa management software hoga jisme tum students ke records manage kar sakte ho (jaise ek chhoti database).
+Matlab:
+
+Student ka naam, roll number, age, marks save karna
+
+Unko screen pe dikhana
+
+Search karna
+
+Update karna
+
+Delete karna
+
+Aur ye sab file mein bhi save rahe, taki program band karke dubara chalane par data wapas mil jaye.
+
+2. Main Menu (Program ka control center)
+Jab user program run karega, usse options milenge:
+
+Add Student
+
+Display All Students
+
+Search Student
+
+Update Student
+
+Delete Student
+
+Exit
+
+Ye menu bar-bar loop mein chalega jab tak user Exit nahi choose karta.
+
+3. Features ek ek karke
+(a) Add Student
+User se details mangni hain (Name, Roll No, Age, Marks).
+
+Inko ek structure (struct) ke andar store karna hai.
+
+Phir is record ko list ya file mein save karna hai.
+
+(b) Display All
+Saare students ke records ek sath screen par print karna.
+
+Agar file handling use kar rahe ho to file se read karke dikhana.
+
+(c) Search Student
+User roll number ya naam enter karega.
+
+Tumhe data mein us record ko dhundna hoga.
+
+Agar mila to details show kar do, warna “Not Found” likho.
+
+(d) Update Student
+Pehle search karna hai record.
+
+Agar record mil jaye to user se new details lo (jaise marks change karne hain ya age update karni hai).
+
+Fir updated data save kar do.
+
+(e) Delete Student
+Pehle record search karna hai.
+
+Agar mila to us record ko hata do (file/array se).
+
+Agar array use ho raha hai to baaki records shift karne padenge.
+
+(f) Exit
+Program close karna.
+
+File use ho rahi hai to ensure karna ke saara data properly save ho gaya.
+
+4. Concepts Jo Tum Practice Karoge
+Structures (struct) → ek student ke record ko group karne ke liye.
+
+Arrays / Linked List → ek se zyada students ko memory mein store karne ke liye.
+
+File Handling → data ko permanent save karne ke liye (fopen, fread, fwrite).
+
+Functions → har kaam ke liye alag function (add, display, search…).
+
+Loops & Conditions → menu repeat karna aur choices check karna.
+
+5. Optional Add-ons (Extra Features)
+Students ko marks ya name ke hisaab se sort karna.
+
+Class average marks calculate karna.
+
+Admin ke liye password protection lagana.
+
+Questions/Answers :
+
+Student ka naam, roll number, age, marks save karna 
+
+khan pe file main or in ko user se lena ha or  kitne student ke liye 
+
+Unko screen pe dikhana
+
+jitne bhi hon gy sab ko print kar dena file main ke display karna ha pf ki madad se 
+
+Search karna 
+Update karna
+Delete karna
+
+ye teno ke liye ha kis cheeze se or kese khan pe search karna ha 
+
+Aur ye sab file mein bhi save rahe, taki program band karke dubara chalane par data wapas mil jaye.
+
+FILE *fptr;
+a mode main 
+
+Aur ye sab file mein bhi save rahe, taki program band karke dubara chalane par data wapas mil jaye.
+
+kese ?
+
+2. Main Menu (Program ka control center)
+Jab user program run karega, usse options milenge:
+
+Add Student
+
+Display All Students
+
+Search Student
+
+Update Student
+
+Delete Student
+
+Exit
+
+Ye menu bar-bar loop mein chalega jab tak user Exit nahi choose karta.
+
+inko hum choice 1 add student ,2 display all student ....6 for exit 
+
+ Phir is record ko list ya file mein save karna hai.
+
+file ko write mode main fprintf se write karwana ha ?
+
+(b) Display All
+Saare students ke records ek sath screen par print karna.
+
+Agar file handling use kar rahe ho to file se read karke dikhana.
+
+lekin masla ye ha ke display all students kese karein ge jab hum user se 1 student ka input lein gy 
+
+c) Search Student
+User roll number ya naam enter karega.
+
+Tumhe data mein us record ko dhundna hoga.
+
+Agar mila to details show kar do, warna “Not Found” likho.
+
+d) Update Student
+Pehle search karna hai record.
+
+Agar record mil jaye to user se new details lo (jaise marks change karne hain ya age update karni hai).
+
+Fir updated data save kar do.
+
+(e) Delete Student
+Pehle record search karna hai.
+
+Agar mila to us record ko hata do (file/array se).
+
+Agar array use ho raha hai to baaki records shift karne padenge.
+
+kese?
+
+5. Optional Add-ons (Extra Features)
+Students ko marks ya name ke hisaab se sort karna.
+
+Class average marks calculate karna.
+
+Admin ke liye password protection lagana.
+
+pehle baqi project ban jaye phir optional kaam add karon ga ok !
+
+mere sare answers alag likhna ok! 👌 🆗 ✅ 👍 
+
+main ummeed karta hon ke is ke baad mujhe samjh a jaye gi 
+
+in sab ko block alag alag blocks maiinb likhna 
+
+
+🔹 1. Student ka naam, roll number, age, marks save karna
+Ye data user se input lena hai (scanf se).
+
+Fir usko ek structure ke andar store karna hai.
+
+Us record ko file ke andar save karna hai.
+
+Kitne students? → Jitne user chahe. Har baar jab user "Add Student" select karega, ek naya record file ke end mein append ho jayega.
+
+👉 Matlab limit fix nahi hai. Tum jitne chahe students add kar sakte ho.
+
+🔹 2. Unko screen pe dikhana (Display All Students)
+Jab user "Display All" choose karega:
+
+File ko read mode (r) mein open karo.
+
+File ke andar jitne records hain, unhe ek ek karke read karo.
+
+Har record ko printf ke zariye screen par show kar do.
+
+👉 Tum poore students ek sath dekh loge.
+Isliye chahe tum ek student add karo ya 50, sab file mein store rahenge aur display option pe sab print ho jayenge.
+
+🔹 3. Search karna
+User input dega (Roll Number ya Name).
+
+File ko read mode mein open karo.
+
+Har record ko ek ek read karo aur compare karo:
+
+Agar match mil gaya to details screen pe print kar do.
+
+Agar file ke end tak nahi mila to "Not Found" print kar do.
+
+👉 Ye search hamesha file ke andar hi hoti hai.
+
+🔹 4. Update karna
+Pehle search karna hoga (Roll ya Name se).
+
+Agar record mil gaya:
+
+User se naya data input lo (jaise new marks, age).
+
+Ek temporary file banao.
+
+Purani file ko read karo:
+
+Jo record match nahi karta, usko as it is copy karo.
+
+Jo record match karta, usko updated details ke sath save karo.
+
+End mein purani file delete karo aur temporary file ko original file ka naam de do.
+
+👉 Is tarah update ho jata hai.
+
+🔹 5. Delete karna
+Delete bhi update ki tarah hota hai.
+
+Pehle search karo (Roll/Name).
+
+Ek temporary file banao.
+
+Purani file ke saare records ek ek read karo:
+
+Agar record delete karna hai → usko skip kar do.
+
+Baaki sab records temporary file mein copy kar do.
+
+End mein purani file delete kar do aur temporary file ko uska naam de do.
+
+ 6 for exit
