@@ -1,0 +1,7 @@
+All the remaining files of this folder is lying in drive of mehmood.mh56@gmail.com ok 
+
+
+gcc main.c Validation_functions.c -o program
+
+
+This is the syntax of Running Two file that attached each other and then Write : ./program 
